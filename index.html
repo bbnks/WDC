@@ -7,6 +7,13 @@
 </head>
 <body>
   <h1>CMS Web Data Connector</h1>
-  <button onclick="submit()">Get CMS Data (NY)</button>
+    <label for="stateInput">Enter State Code (e.g. NY): </label>
+    <input type="text" id="stateInput" maxlength="2" value="NY" />
+    <button id="submitButton">Get Data</button>
+    <div id="message"></div>
+  <button onclick="submit()">Get CMS Data</button>
 </body>
 </html>
+
+
+

@@ -64,7 +64,26 @@
     tableau.registerConnector(myConnector);
 
     // Setup event listeners and submit logic
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoa(function () {
+    // Create the connector object
+    var myConnector = tableau.makeConnector();
+
+    // Define the schema
+    myConnector.getSchema = function (schemaCallback) {
+        const cols = [
+            { id: "rpt_rec_num", dataType: tableau.dataTypeEnum.string },
+            { id: "Provider_CCN", alias: "Provider CCN", dataType: tableau.dataTypeEnum.string },
+            { id: "Hospital_Name", dataType: tableau.dataTypeEnum.string },
+            { id: "City", dataType: tableau.dataTypeEnum.string },
+            { id: "State_Code", dataType: tableau.dataTypeEnum.string },
+            { id: "Zip_Code", dataType: tableau.dataTypeEnum.string },
+            { id: "Inpatient_Revenue", dataType: tableau.dataTypeEnum.float },
+            { id: "Outpatient_Revenue", dataType: tableau.dataTypeEnum.float },
+            { id: "Net_Patient_Revenue", dataType: tableau.dataTypeEnum.float },
+            { id: "Total_Assets", dataType: tableau.dataTypeEnum.float },
+            { id: "Total_Liabilities", dataType: tableau.dataTypeEnum.float },
+            { id: "Total_Income", dataTyp_
+ded', () => {
         const getDataBtn = document.getElementById("getDataBtn");
         const stateInput = document.getElementById("stateInput");
         const message = document.getElementById("message");
