@@ -2,17 +2,15 @@
 <html>
 <head>
   <title>CMS WDC</title>
-  <script src="https://connectors.tableau.com/libs/tableauwdc-2.3.0.min.js"></script>
-  <script src="app.js"></script>
+  <script src="https://connectors.tableau.com/libs/tableauwdc-2.3.latest.js"></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <h1>CMS Web Data Connector</h1>
-    <label for="stateInput">Enter State Code (e.g. NY): </label>
-    <input type="text" id="stateInput" maxlength="2" value="NY" />
-    <button id="submitButton">Get Data</button>
-    <div id="message"></div>
+  <h2>CMS Hospital Financial Data Connector</h2>
+
+  <label for="stateInput">Enter State Code (e.g., NY):</label>
+  <input type="text" id="stateInput" placeholder="e.g. NY" />
+
+  <button id="submitButton">Get Data</button>
 </body>
 </html>
-
-
-
